@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidade do BASTION</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1d2014; --muted:#5b6150; --accent:#5a6b1e; --line:#e3e7d6; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0e100c; --fg:#ecefe4; --muted:#a9ae9c; --accent:#a9be45; --line:#2a2f22; } }
+  html { background:var(--bg); }
+  body { max-width:720px; margin:0 auto; padding:32px 16px 64px; color:var(--fg); background:var(--bg);
+         font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  header { border-bottom:2px solid var(--accent); padding-bottom:12px; margin-bottom:24px; }
+  .brand { color:var(--accent); font-weight:800; letter-spacing:.06em; }
+  h1 { font-size:1.7rem; line-height:1.25; margin:.2em 0 0; }
+  h2 { font-size:1.2rem; margin-top:2em; color:var(--accent); }
+  a { color:var(--accent); word-break:break-word; }
+  li { margin:.35em 0; }
+  footer { margin-top:48px; padding-top:12px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<header><div class="brand">BASTION</div><h1>Política de privacidade do BASTION</h1></header>
+<p>Última atualização: 11 de novembro de 2026 (alertas de desastre e tradutor offline)</p>
+<p>O BASTION é um aplicativo de preparação para emergências que funciona sem internet. Esta política explica, em linguagem simples, o que acontece com os seus dados.</p>
+<h2>Resumo</h2>
+<ul>
+<li><strong>Não existe conta nem cadastro.</strong> Você não informa e-mail, telefone ou nome para usar o app.</li>
+<li><strong>Tudo o que você digita fica só no seu celular</strong>, em um banco de dados criptografado.</li>
+<li><strong>Não temos servidor que receba seus dados.</strong> Nós, desenvolvedores, não vemos o seu estoque, a sua família, os seus contatos nem os seus documentos.</li>
+<li><strong>Não há anúncios, rastreadores nem ferramentas de análise</strong> (analytics) no app.</li>
+</ul>
+<h2>O que o app guarda no seu celular</h2>
+<ul>
+<li>Itens do estoque (água, alimentos, materiais), datas de validade e manutenção.</li>
+<li>Pessoas da casa (nome, idade, sexo, nível de atividade, peso e altura opcionais), usadas para calcular quantos dias o estoque dura.</li>
+<li>Contatos de emergência, pontos de encontro e planos para cada situação.</li>
+<li>Cofre: notas, fotos e arquivos que você escolhe guardar. O Cofre só abre com a sua digital, rosto ou bloqueio de tela, e os arquivos ficam criptografados.</li>
+<li>Mapas e locais de emergência que você baixou, e as rotas de fuga que você desenhou.</li>
+<li>Para os alertas: uma posição aproximada da sua região (arredondada para cerca de 1 km), guardada só no celular e nunca enviada.</li>
+<li>O plano da família (respostas do planejador e a lista da mochila).</li>
+<li>Ajustes do app.</li>
+</ul>
+<p>Esses dados são criptografados com uma chave protegida pelo próprio celular (Android Keystore). Se você desinstalar o app, eles são apagados.</p>
+<h2>Quando o app usa a internet</h2>
+<p>O BASTION usa a internet apenas para o que está abaixo (os alertas rodam sozinhos, se estiverem ligados; o resto só quando você pede):</p>
+<ol>
+<li><strong>Baixar mapas</strong> de uma região (servidor OpenFreeMap). O pedido contém apenas as coordenadas da área do mapa, não a sua localização nem quem você é.</li>
+<li><strong>Baixar locais de emergência</strong> (hospitais, polícia, bombeiros) da região escolhida, a partir do OpenStreetMap (servidores Overpass). O pedido contém apenas o retângulo da região escolhida.</li>
+<li><strong>Verificar alertas de desastre</strong> (se o monitoramento estiver ligado), a cada 30 minutos quando há internet. O app baixa as listas <strong>completas e públicas</strong> de avisos do INMET (avisos meteorológicos), do USGS (terremotos) e do GDACS (grandes desastres) e confere <strong>no próprio celular</strong> quais atingem os seus lugares. Nenhuma localização é enviada nesses pedidos.</li>
+<li><strong>Baixar idiomas do tradutor offline</strong> (Google ML Kit), só quando você toca em "Baixar". A tradução acontece no celular: o texto que você traduz não é enviado. O componente do Google pode enviar dados técnicos de diagnóstico do próprio componente, conforme a política do Google.</li>
+<li><strong>Abrir links de vídeos</strong> que você mesmo cadastrou, no navegador ou no app de vídeo.</li>
+</ol>
+<p>Esses serviços recebem o endereço de internet (IP) do aparelho, como acontece com qualquer acesso à internet, e seguem as próprias políticas de privacidade. O app não envia para eles nenhum dado do seu estoque, família, contatos ou Cofre.</p>
+<h2>Permissões do celular</h2>
+<p>Cada permissão é pedida só quando você usa o recurso:</p>
+<ul>
+<li><strong>Localização (GPS):</strong> mostrar sua posição no mapa, suas coordenadas e os locais de emergência mais perto. A posição não sai do celular.</li>
+<li><strong>Câmera:</strong> ler sinais de Morse por luz e fotografar documentos para o Cofre. As imagens não saem do celular, exceto se você mesmo compartilhar.</li>
+<li><strong>Notificações:</strong> avisar sobre validades e manutenções do estoque e sobre alertas de desastre (com som de alarme, se você deixar ligado).</li>
+<li><strong>Biometria / bloqueio de tela:</strong> abrir o Cofre.</li>
+</ul>
+<h2>Backup</h2>
+<p>O backup é um arquivo criptografado com uma senha criada por você. Você escolhe onde salvá-lo (por exemplo, Google Drive, computador ou pen drive). Sem a senha, ninguém consegue abrir o arquivo, nem nós. Se você esquecer a senha, não há como recuperar o conteúdo.</p>
+<h2>Crianças</h2>
+<p>O app pode ser usado por famílias, mas não coleta dados de ninguém, inclusive de crianças.</p>
+<h2>Seus direitos (LGPD)</h2>
+<p>Como não coletamos nem armazenamos seus dados em servidores, não há dados seus conosco para consultar, corrigir ou excluir. Você controla tudo no próprio app: pode editar ou apagar qualquer informação a qualquer momento, ou desinstalar o app para apagar tudo.</p>
+<h2>Conteúdo de saúde</h2>
+<p>Os guias de primeiros socorros são informativos e não substituem atendimento profissional. Em emergência, ligue 192 (SAMU) ou 193 (Bombeiros).</p>
+<h2>Contato</h2>
+<p>Dúvidas, pedidos ou problemas com esta política: abra uma mensagem em <strong><a href="https://github.com/PlinioCBS/bastion-privacidade/issues">https://github.com/PlinioCBS/bastion-privacidade/issues</a></strong> (botão "New issue"; é preciso uma conta gratuita no GitHub). Respondemos por lá.</p>
+<p>Se esta política mudar, a nova versão será publicada neste mesmo endereço, com a data de atualização.</p>
+<footer>BASTION · preparação e sobrevivência que funciona sem internet.</footer>
+</body>
+</html>
