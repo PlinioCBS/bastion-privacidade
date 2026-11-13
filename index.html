@@ -21,13 +21,13 @@
 </head>
 <body>
 <header><div class="brand">BASTION</div><h1>Política de privacidade do BASTION</h1></header>
-<p>Última atualização: 11 de novembro de 2026 (alertas de desastre e tradutor offline)</p>
+<p>Última atualização: 13 de novembro de 2026 (sinalizador de resgate avisa a família com a posição)</p>
 <p>O BASTION é um aplicativo de preparação para emergências que funciona sem internet. Esta política explica, em linguagem simples, o que acontece com os seus dados.</p>
 <h2>Resumo</h2>
 <ul>
 <li><strong>Não existe conta nem cadastro.</strong> Você não informa e-mail, telefone ou nome para usar o app.</li>
 <li><strong>Tudo o que você digita fica só no seu celular</strong>, em um banco de dados criptografado.</li>
-<li><strong>Não temos servidor que receba seus dados.</strong> Nós, desenvolvedores, não vemos o seu estoque, a sua família, os seus contatos nem os seus documentos.</li>
+<li><strong>Não temos servidor que guarde seus dados.</strong> Nós, desenvolvedores, não vemos o seu estoque, a sua família, os seus contatos nem os seus documentos. A única função que passa por um servidor nosso é o <strong>alarme da família</strong>, que é opcional e vai criptografado (veja abaixo).</li>
 <li><strong>Não há anúncios, rastreadores nem ferramentas de análise</strong> (analytics) no app.</li>
 </ul>
 <h2>O que o app guarda no seu celular</h2>
@@ -39,6 +39,7 @@
 <li>Mapas e locais de emergência que você baixou, e as rotas de fuga que você desenhou.</li>
 <li>Para os alertas: uma posição aproximada da sua região (arredondada para cerca de 1 km), guardada só no celular e nunca enviada.</li>
 <li>O plano da família (respostas do planejador e a lista da mochila).</li>
+<li>O código do seu grupo da família e os avisos enviados e recebidos, se você usar o alarme da família.</li>
 <li>Ajustes do app.</li>
 </ul>
 <p>Esses dados são criptografados com uma chave protegida pelo próprio celular (Android Keystore). Se você desinstalar o app, eles são apagados.</p>
@@ -49,15 +50,16 @@
 <li><strong>Baixar locais de emergência</strong> (hospitais, polícia, bombeiros) da região escolhida, a partir do OpenStreetMap (servidores Overpass). O pedido contém apenas o retângulo da região escolhida.</li>
 <li><strong>Verificar alertas de desastre</strong> (se o monitoramento estiver ligado), a cada 30 minutos quando há internet. O app baixa as listas <strong>completas e públicas</strong> de avisos do INMET (avisos meteorológicos), do USGS (terremotos) e do GDACS (grandes desastres) e confere <strong>no próprio celular</strong> quais atingem os seus lugares. Nenhuma localização é enviada nesses pedidos.</li>
 <li><strong>Baixar idiomas do tradutor offline</strong> (Google ML Kit), só quando você toca em "Baixar". A tradução acontece no celular: o texto que você traduz não é enviado. O componente do Google pode enviar dados técnicos de diagnóstico do próprio componente, conforme a política do Google.</li>
+<li><strong>Alarme da família</strong> (opcional: só funciona se você criar ou entrar em um grupo). Quando alguém do grupo dispara o alarme, o app envia uma mensagem para os outros celulares do grupo com: o nome que a pessoa escolheu, o que aconteceu, um recado opcional e o ponto de encontro escolhido (nome, referência e coordenadas). Essa mensagem sai do celular <strong>criptografada de ponta a ponta</strong>, com uma chave que existe só nos celulares do grupo. Ela passa por um repassador nosso e pelo serviço de notificações do Google (Firebase Cloud Messaging), que <strong>não conseguem ler o conteúdo</strong> e não o guardam. O <strong>sinalizador de resgate</strong> (Emergência), quando ligado em um celular que está em um grupo e tem internet, envia pelo mesmo caminho criptografado um pedido de resgate com a <strong>sua posição</strong>, atualizada se você se mover, e um aviso quando é desligado. Isso só acontece depois de 10 segundos com o sinalizador ligado, e a posição vai apenas para os celulares do seu grupo. Para entregar a notificação, o Google registra um identificador do aparelho e o endereço aleatório do grupo, como em qualquer app com notificações push. Sair do grupo no app encerra a inscrição.</li>
 <li><strong>Abrir links de vídeos</strong> que você mesmo cadastrou, no navegador ou no app de vídeo.</li>
 </ol>
-<p>Esses serviços recebem o endereço de internet (IP) do aparelho, como acontece com qualquer acesso à internet, e seguem as próprias políticas de privacidade. O app não envia para eles nenhum dado do seu estoque, família, contatos ou Cofre.</p>
+<p>Esses serviços recebem o endereço de internet (IP) do aparelho, como acontece com qualquer acesso à internet, e seguem as próprias políticas de privacidade. O app não envia para eles nenhum dado do seu estoque, família, contatos ou Cofre; a única exceção é a mensagem do alarme da família (item 5), que você mesmo dispara e que vai criptografada.</p>
 <h2>Permissões do celular</h2>
 <p>Cada permissão é pedida só quando você usa o recurso:</p>
 <ul>
-<li><strong>Localização (GPS):</strong> mostrar sua posição no mapa, suas coordenadas e os locais de emergência mais perto. A posição não sai do celular.</li>
+<li><strong>Localização (GPS):</strong> mostrar sua posição no mapa, suas coordenadas e os locais de emergência mais perto. A posição só sai do celular em um caso: quando você liga o sinalizador de resgate estando em um grupo da família (item 5 acima), e vai criptografada, apenas para o seu grupo.</li>
 <li><strong>Câmera:</strong> ler sinais de Morse por luz e fotografar documentos para o Cofre. As imagens não saem do celular, exceto se você mesmo compartilhar.</li>
-<li><strong>Notificações:</strong> avisar sobre validades e manutenções do estoque e sobre alertas de desastre (com som de alarme, se você deixar ligado).</li>
+<li><strong>Notificações:</strong> avisar sobre validades e manutenções do estoque, sobre alertas de desastre e sobre o alarme da família (com som de alarme, se você deixar ligado).</li>
 <li><strong>Biometria / bloqueio de tela:</strong> abrir o Cofre.</li>
 </ul>
 <h2>Backup</h2>
